@@ -26,7 +26,7 @@ CMD="gcloud alpha dlp datasources bigquery"
 for T_NAME in ${TABLES[@]};
 do
   #Build the whole thing...
-  COMMAND="$CMD $ACTION $PROJECT.$DATASET.$T_NAME --info-types $INFOTYPES"
+  COMMAND="$CMD $ACTION $PROJECT.$DATASET.$T_NAME --info-types $INFOTYPES --output-table=$PROJECT.$DATASET"
   echo "Going to submit this... $COMMAND"
 
   #so we run the command...
